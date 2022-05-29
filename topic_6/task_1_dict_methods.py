@@ -20,3 +20,21 @@ things = {'карандаш': 20, 'зеркальце': 100, 'зонт': 500, '�
 Формат выходных данных:
 Список через пробел.
 """
+things = {'карандаш': 20, 'зеркальце': 100, 'зонт': 500, 'рубашка': 300,
+          'брюки': 1000, 'бумага': 200, 'молоток': 600, 'пила': 400, 'удочка': 1200,
+          'расческа': 40, 'котелок': 820, 'палатка': 5240, 'брезент': 2130, 'спички': 10}
+
+weidth = int(input()) * 1000
+weidth_in_backpack = sorted([inventory for inventory in things.values()], reverse=True)
+
+inventory_in_way = []
+for i in range(len(weidth_in_backpack)):
+    for key, val in things.items():
+        if weidth - val >= 0:
+            if val == weidth_in_backpack[i]:
+                # print(key, end=' ')
+                inventory_in_way.append(key)
+                weidth -= val
+                break
+
+print(*inventory_in_way)
