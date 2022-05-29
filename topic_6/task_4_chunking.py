@@ -14,3 +14,17 @@
 Формат выходных данных:
 Вывести указанный вложенный список.
 """
+
+
+def chunked(stroka, number):
+    chunk = []
+    while len(stroka) > 0:
+        chunk.append(stroka[:n])
+        stroka = stroka[n:]
+    return chunk
+
+
+s = input().split()
+n = int(input())
+
+print(chunked(s, n))
