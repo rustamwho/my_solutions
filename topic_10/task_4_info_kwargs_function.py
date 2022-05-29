@@ -11,3 +11,8 @@
 Формат выходных данных:
 Только реализовать, ничего выводить не нужно.
 """
+def info_kwargs(**kwargs):
+    stroka = ''
+    for key, value in sorted(kwargs.items()):
+        stroka += f'{key}: {value}\n'
+    return stroka
