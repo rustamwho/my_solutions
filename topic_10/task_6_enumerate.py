@@ -14,3 +14,7 @@ Enumerate.
 Формат выходных данных:
 Строка полученных чисел через пробел.
 """
+numbers_list = list(map(int, input().split()))
+for index, value in enumerate(numbers_list):
+    numbers_list[index] = value ** 2
+print(*numbers_list)
