@@ -12,3 +12,11 @@
 Формат выходных данных:
 Последовательность строк.
 """
+import re
+import sys
+
+for line in sys.stdin:
+    line = line.rstrip()
+    regex = r'\b(\w)(\w)'
+    line_sub = re.sub(regex, r'\2\1', line)
+    print(line_sub)
