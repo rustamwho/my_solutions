@@ -12,3 +12,9 @@
 Формат выходных данных:
 Сумму чисел, содержащихся одновременно как в первой строке, так и во второй.
 """
+a = list(map(int, input().split()))
+a = set(a)
+b = list(map(int, input().split()))
+b = set(b)
+c = a.intersection(b)
+print(sum(c))
