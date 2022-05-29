@@ -20,3 +20,8 @@
 Цитозин: 3
 Тимин: 5
 """
+from utils import get_text_for_genetics
+
+inp = input().strip().upper()
+text = get_text_for_genetics(inp)
+print(text)
