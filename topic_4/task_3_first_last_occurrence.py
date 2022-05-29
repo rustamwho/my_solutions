@@ -14,3 +14,10 @@
 Формат выходных данных:
 Вывести текст в соответствии с условием задачи.
 """
+s = input()
+if s.count('f') == 1:
+    print(s.find('f'))
+elif s.count('f') >= 2:
+    print(s.find('f'), s.rfind('f'))
+else:
+    print('NO')
