@@ -13,3 +13,12 @@
 Формат выходных данных:
 Натуральное число.
 """
+set_1 = set()
+while True:
+    symbol = input()
+    if symbol != 'q':
+        set_1.add(symbol)
+    else:
+        break
+
+print(len(set_1))
