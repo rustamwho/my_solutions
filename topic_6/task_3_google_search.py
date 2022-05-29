@@ -14,3 +14,11 @@ Google Search.
 Формат выходных данных:
 Все введенные строки, в которых встречаются все поисковые запросы.
 """
+s = [input() for _ in range(int(input()))]
+d = [input() for _ in range(int(input()))]
+for i in s:
+    for j in d:
+        if j.lower() not in i.lower():
+            break
+    else:
+        print(i)
