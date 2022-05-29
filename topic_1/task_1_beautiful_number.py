@@ -13,3 +13,8 @@
 Формат выходных данных:
 Программа должна вывести текст в соответствии с условием задачи.
 """
+number = input().rstrip()
+if len(number) == 4 and (int(number) % 7 == 0 or int(number) % 17 == 0):
+    print('YES')
+else:
+    print('NO')
